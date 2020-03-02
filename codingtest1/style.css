@@ -1,0 +1,816 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+
+/* ========================================
+    全体設定
+========================================= */
+body {
+    border-top: 4px solid #11d49c;
+	color:#555555;
+	font-size: 14px;
+	line-height: 1.4em;
+	font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color:#555555;
+	text-decoration:none;
+}
+
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+
+/* ========================================
+    ヘッダー
+========================================= */
+header{
+    width: 100%;
+    height: 76px;
+}
+
+div#header_inner{
+    width: 1000px;
+    height: 75px;
+    margin: 0 auto;
+
+}
+
+h1{
+    padding-top: 25px;
+    margin-left: 10px;
+    float: left
+}
+
+
+header nav {
+    float: right;
+    margin-top: 26px;
+}
+
+
+header nav ul li {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 50px;
+    width: auto;
+    height: 22px;
+}
+
+header nav ul li a{
+    width: auto;
+    height: 22px;
+    display: inline-block;
+    line-height: 22px;
+    padding-left: 30px;
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-weight: 600;
+}
+
+header nav ul li a span{
+    padding-left: 9px;
+    padding-top: 0px;
+    
+}
+
+header li#home{
+      background: url(images/top4.png) no-repeat;
+}
+
+header li#gyoukai{
+      background: url(images/top2.png) no-repeat;
+}
+
+header li#guide{
+      background: url(images/top50.png) no-repeat;
+}
+
+header li#setting{
+    background: url(images/top3.png) no-repeat;
+    border-right: 1px solid #333333;
+}
+
+header li#search{
+      background: url(images/top1.png) no-repeat;
+    padding-right: 0;
+    margin-left: 60px;
+}
+
+
+
+/* ========================================
+    メイン画像
+========================================= */
+
+div#main_image{
+    width: 100%;
+    height: 339px;
+    background-color: red;
+    background: url(images/main.png) no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding-top: 51px;
+    
+}
+
+div#main_image dt{
+    height: 144px;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0.84px;
+    background: url(images/top5.png) no-repeat 50% 25%;
+}
+div#main_image dd#main1{
+    width: auto;
+    height: auto;
+    font-family: HiraKakuProN-W6;
+    font-size: 27.32px;
+    color: #FFFFFF;
+    letter-spacing: 0.72px;
+    display: block;
+    margin-bottom: 32px;
+}
+
+div#main_image dd#main2{
+   font-family: KozGoPr6N-Medium;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 25px;
+}
+
+
+
+#form1{
+    width: 566px;
+    height: 36px;
+    margin: 0 auto;
+    position:relative; 
+    border: 5px solid rgba(0,0,0,0.3);
+    border-radius: 5px;
+}
+
+#sbox{
+    position:absolute	
+    outline:0;
+    width: 551px;
+    height:36px;
+    background:#fff;
+    border: none;
+    padding: 0 0 0 14px;
+    font-size: 14px;
+    color: #b4b4b4;
+    }
+
+/*検索ボタン*/
+#sbtn{
+background: url(images/ss.png) no-repeat 15px 11px;
+cursor: pointer;
+width:70px;
+height:34px;
+position:absolute;
+right: 1px;
+top:1px;
+background-color: #11d49c;
+border:none;
+color:#fff;
+font-size:14px; 
+    font-weight: 600;
+    padding-left: 32px;
+    line-height: 34px;
+}
+
+
+
+
+
+
+
+
+
+/* ========================================
+    レフト
+========================================= */
+div#contents{
+    width: 100%;
+    height: auto;
+    background-color: #f3f3f3;
+    padding-top: 28px;
+    padding-bottom: 45px;
+}
+div#main_wrapper{
+    width: 1002px;
+    height: auto;
+    margin:0 auto;
+    background-color: #f3f3f3;
+    position: relative;
+}
+div#left{
+    width: 695px;
+    height: auto;
+    float: left;
+}
+
+div#left_box1{
+    width: 693px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 28px;
+}
+
+div#left h2{
+    height: 56px;
+    width: 618px;
+    line-height: 56px;
+    padding-left: 75px;
+    color: #11d49c;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #fff;
+}
+
+div#left_box1 h2{
+        background: url(images/top7.gif) no-repeat;
+}
+
+div#left_box2 h2{
+        background: url(images/top10.gif) no-repeat;
+}
+
+div#left_box3 h2{
+        background: url(images/top30.gif) no-repeat;
+}
+
+div#left_box1 ul{
+    float: left;
+    margin: 19px 23px;
+    width: 302px;
+}
+
+div#left_box1 ul:last-child{
+    width: auto;
+}
+
+div#left_box1 ul li{
+    margin-bottom: 16px;
+}
+
+div#left_box1 ul li:last-child{
+    margin-bottom: 0;
+}
+
+div#left_box1 ul li a{
+    background: url(images/_.png) no-repeat;
+    padding-left: 19px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+div#left_box1 ul li a:hover{
+    color: #11D49C;
+}
+
+
+div#left_box2{
+    width: auto;
+    height: auto;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 28px; 
+    background-color: #fff;
+}
+
+div#category{
+    width: auto;
+    height: aut;
+    background-color: #fff;
+    padding: 20px 0px 20px 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+div#category:last-child{
+    border-bottom: none;
+}
+
+div#category dt{
+    float: left;
+}
+
+div#category dd#cate1{
+    color: #a5a5a5;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+div#category dd#cate1 span{
+    color: #555555;
+    font-weight: 600;
+    border-bottom: 1px solid #555555;
+    margin-left: 23px;
+    font-size: 16px;
+}
+
+div#category dd#cate1 span:hover{
+    color: #11D49C;
+    border-bottom: 1px solid #11D49C;
+}
+
+div#category span{
+    color: #a5a5a5;
+    border: none;
+}
+
+div#category dd{
+    font-size: 14px;
+    overflow: auto;
+}
+
+div#category ul:first-child{
+    margin-left: 23px;
+}
+
+div#category ul{
+    width: 191px;
+    float: left;
+}
+
+div#category ul:last-child{
+    width: auto;
+}
+
+div#category li{
+    line-height: 14px;
+    margin-bottom: 14px;
+    font-weight: 600;
+    background: url(images/btn1.png) no-repeat left 1px top 5px;
+    padding-left: 13px;
+}
+
+div#category li:hover{
+    color: #11D49C;
+}
+
+div#category li:last-child{
+    margin-bottom: 0;
+}
+
+div#category li span{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+div#left_box3{
+    width: auto;
+    height: auto;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+}
+
+div#left_box3 li{
+    line-height: 43px;
+    padding-left: 27px;
+    background: url(images/btn2.png) no-repeat top 20px left 0px;
+    border-bottom: 1px solid #f3f3f3;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+div#left_box3 li:last-child{
+    border: none;
+    line-height: 44px;
+}
+
+div#left_box3 li span{
+    color: #8b8b8b;
+}
+
+/* ========================================
+   ライト
+========================================= */
+
+
+div#right{
+    width: 277px;
+    height: 1019px;
+    float: right;
+}
+
+div#right_box1{
+    width: 275px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 28px;
+}
+
+div#right h2{
+    height: 56px;
+    width: 200px;
+    line-height: 56px;
+    padding-left: 75px;
+    color: #11d49c;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #fff;
+}
+
+div#right_box1 h2{
+        background: url(images/top8.gif) no-repeat;
+}
+
+div#right_box2 h2{
+        background: url(images/top9.gif) no-repeat;
+}
+
+div#right_box3 h2{
+    background: url(images/top17.gif) no-repeat;
+}
+
+div#right_box1 ul{
+    width: 100%;
+    max-width: 243px;
+    height: auto;
+    min-height: 14px;
+    padding: 16px;
+}
+
+div#right_box1 ul li{
+    float: left;
+    line-height: 27px;
+    border: 1px solid #e2e2e2;
+    padding: 0 11px;
+    margin-bottom: 7px;
+    margin-right: 6px;
+    border-radius: 3px;
+}
+
+div#right_box1 ul li:last-child{
+    margin-bottom: 0;
+}
+
+div#right_box1 ul li a{
+    font-weight: 600;
+}
+
+div#right_box1 ul li a:hover{
+    color: #11D49C;
+    text-decoration: underline;
+}
+
+div#right_box2{
+    width: auto;
+    height: auto;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    margin-bottom: 28px;
+}
+
+div#right_box2 li{
+    line-height: 43px;
+    padding-left: 35px;
+    border-bottom: 1px solid #f3f3f3;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+div#right_box2 li#guide1{
+    background: url(images/top11.gif) no-repeat top 12px left 0px;
+}
+
+div#right_box2 li#guide2{
+    background: url(images/top12.gif) no-repeat top 12px left 0px;
+}
+
+div#right_box2 li#guide3{
+    background: url(images/top14.gif) no-repeat top 12px left 0px;
+}
+
+div#right_box2 li#guide4{
+    background: url(images/top15.gif) no-repeat top 12px left 0px;
+}
+
+div#right_box2 li:last-child{
+    border: none;
+    line-height: 44px;
+}
+
+div#right_box2 li a{
+    font-weight: 600;
+}
+
+div#right_box2 ul li a:hover{
+    color: #11D49C;
+    text-decoration: underline;
+}
+
+div#right_box3{
+    width: auto;
+    height: auto;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    margin-bottom: 28px;
+}
+
+div#popular{
+    width: 245px;
+    height: auto;
+    background-color: #fff;
+    padding: 0 15px;
+    position: relative;
+}
+
+
+div#popular ul{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-top: 1px dotted #999999;
+}
+
+div#popular ul:first-child{
+    border: none;
+}
+
+div#popular ul:last-of-type{
+    border-bottom: 1px dotted #999999;
+    
+}
+
+div#popular dt{
+    float: left;
+    margin-right: 15px;
+    position: relative;
+}
+
+div#popular dt div{
+    width: 15px;
+    height: 15px;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+div#popular dd.kizi:hover{
+    color: #11D49C;
+    text-decoration: underline;
+    font-weight: 600;
+    margin-bottom: 12px
+}
+
+div#popular dd.kizi{
+    color: #2A2A2A;
+    font-weight: 600;
+    margin-bottom: 12px
+}
+
+div#popular dd.date2{
+    color: #999999;
+    line-height: 12px;
+    font-size: 12px;
+}
+
+
+div#popular p{
+    width: 100%;
+    height: 43px;
+    background-color: #fff;
+    line-height: 43px;
+    font-weight: 600;
+    background: url(images/top31.png) no-repeat right 75px top 15px;
+    
+}
+
+img#back{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* ========================================
+    フッター
+========================================= */
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+    border-top: 1px solid #e8e8e8;
+}
+
+div#footer_inner{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 28px;
+    padding-bottom: 30px;
+}
+
+div#footer1{
+    width: 181px;
+    height: auto;
+    margin-right: 21px;
+    float: left;
+}
+
+div#footer_inner h2{
+    margin-bottom: 30px;
+    height: 28px;
+}
+
+div#footer1 dl dt{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dotted #e8e8e8;
+    margin-bottom: 1.5px;
+}
+
+div#footer1 dl dd{
+    font-size: 12px;
+    color: #a9a9a9;
+    line-height: 25px;
+}
+
+div#footer1 dl dd:hover{
+    color: #BDC1C3;
+    text-decoration: underline;
+}
+
+
+div#footer2 dl dd:hover{
+    color: #BDC1C3;
+    text-decoration: underline;
+}
+
+div#footer2{
+    width: 383px;
+    height: auto;
+    float: left;
+    padding-top: 8px;
+}
+
+div#footer2 h2{
+    height: 20px;
+}
+
+div#footer2 dl dt{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dotted #e8e8e8;
+    margin-bottom: 1.5px;
+}
+
+div#footer2 dl dd{
+    font-size: 12px;
+    color: #a9a9a9;
+    line-height: 25px;
+}
+
+div#box1{
+    float: left;
+    width: 201px;
+}
+
+div#box2{
+    float: left;
+    width: auto;
+}
+
+div#footer3{
+    width: 373px;
+    height: 100%;
+    float: right;
+    color: #91918e;
+}
+
+div#footer3 p{
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+div#footer3 textarea{
+    margin-top: 4.5px;
+    width: 367px;
+    height: 135px;
+    border-radius: 3px;
+    border: 1px solid #dddddd;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-bottom: 2px;
+}
+
+footer input[type='submit']{
+  border: none;
+  display: block;
+    height: 40px;
+  width: 100%;
+  max-width: 373px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #ededed;
+  color: #555555;
+  font-weight: bold;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin: 0 auto;
+    border: 1px solid #dddddd;
+}
+
+div#copyright{
+    width: 100%;
+    height: 54px;
+    background-color: #777777;
+    color: #fff;
+    font-size: 12px;
+}
+
+div#copyright_inner{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+div#copyright p{
+    line-height: 54px;
+    float: left;
+}
+
+div#copyright ul{
+    float: right;
+    line-height: 54px;
+}
+
+div#copyright ul li{
+    float: left;
+    margin-left: 15px;
+}
+
+div#copyright ul li a{
+    color: #BDC1C3;
+}
+
+div#copyright ul li a:hover{
+    color: #a9a9a9;
+    text-decoration: underline;
+}
